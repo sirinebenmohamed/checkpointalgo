@@ -1,0 +1,38 @@
+ALGORITHM Sentence
+VAR
+    ch:CHAR;
+    l,w,v:integer;
+BEGIN
+    writeln("Write a caracter :");
+    readln("ch");
+    l:=1;
+    w:=1;
+    v:=0;
+    WHILE (ch<>".") DO
+        l:=l+1;
+        IF (CH=" ") THEN
+            w:=w+1;
+        END_IF
+        SWITCH (ch) DO
+            case "a" : v:=v+1; BREAK;
+            case "e" : v:=v+1; BREAK;
+            case "i" : v:=v+1; BREAK;
+            case "u" : v:=v+1; BREAK;
+            case "y" : v:=v+1; BREAK;
+            case "A" : v:=v+1; BREAK;
+            case "E" : v:=v+1; BREAK;
+            case "I" : v:=v+1; BREAK;
+            case "U" : v:=v+1; BREAK;
+            case "Y" : v:=v+1; BREAK;
+            default ;
+        END_SWITCH
+        writeln("Write a caracter :");
+    readln("ch");
+    END_WHILE
+    writeln("The length of the sentence : ",l);
+    
+    writeln("The number of words in the sentence : ",w);
+
+    writeln("The number of vowels in the sentence : ",v);
+
+END
